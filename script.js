@@ -1,10 +1,9 @@
-// Create the "scroll to top" link once
 const toTopLink = document.createElement('a');
 toTopLink.setAttribute('href', '#to-top');
 toTopLink.style.position = 'fixed';
 toTopLink.style.bottom = '20px';
 toTopLink.style.right = '20px';
-toTopLink.style.display = 'none'; // Hide initially
+toTopLink.style.display = 'none';
 
 const toTopArrowImage = document.createElement('img');
 toTopArrowImage.setAttribute('src', 'img/scroll_to_top.svg');
@@ -15,8 +14,8 @@ document.body.appendChild(toTopLink);
 
 window.addEventListener('scroll', () => {
   if (window.pageYOffset > 100) {
-    toTopLink.style.display = 'block'; // Show the link
+    toTopLink.style.display = 'block';
   } else {
-    toTopLink.style.display = 'none'; // Hide the link
+    toTopLink.style.display = 'none';
   }
 });
